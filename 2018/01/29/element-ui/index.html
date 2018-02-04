@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="element-UI," />
 
 
 
@@ -79,17 +79,20 @@
 
 
 
-<meta name="description" content="Pleasure comes through toil.">
+<meta name="description" content="&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;这一阵子使用element-ui的时候，一直苦恼于它table组件里的表头的改造。好不容易把样式重置了一遍，现在有需要加N多自定义的样式，类似于表头的筛选，下拉之类的都比较常规，官方文档上面都有详细的教程。那么如果想要自定义该怎么办?先来个简单的比如说现在要实现下图的效果：&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;也是束手无策了一阵子，终于在g">
+<meta name="keywords" content="element-UI">
 <meta property="og:type" content="article">
-<meta property="og:title" content="test_my_site">
-<meta property="og:url" content="http://yoursite.com/2018/01/04/test-my-site/index.html">
+<meta property="og:title" content="element-ui的render-header属性">
+<meta property="og:url" content="http://yoursite.com/2018/01/29/element-ui/index.html">
 <meta property="og:site_name" content="Panthers pit">
-<meta property="og:description" content="Pleasure comes through toil.">
+<meta property="og:description" content="&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;这一阵子使用element-ui的时候，一直苦恼于它table组件里的表头的改造。好不容易把样式重置了一遍，现在有需要加N多自定义的样式，类似于表头的筛选，下拉之类的都比较常规，官方文档上面都有详细的教程。那么如果想要自定义该怎么办?先来个简单的比如说现在要实现下图的效果：&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;也是束手无策了一阵子，终于在g">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-06T14:17:16.184Z">
+<meta property="og:image" content="http://yoursite.com/2018/01/29/element-ui/img/renderFn.png">
+<meta property="og:updated_time" content="2018-02-04T04:23:21.540Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="test_my_site">
-<meta name="twitter:description" content="Pleasure comes through toil.">
+<meta name="twitter:title" content="element-ui的render-header属性">
+<meta name="twitter:description" content="&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;这一阵子使用element-ui的时候，一直苦恼于它table组件里的表头的改造。好不容易把样式重置了一遍，现在有需要加N多自定义的样式，类似于表头的筛选，下拉之类的都比较常规，官方文档上面都有详细的教程。那么如果想要自定义该怎么办?先来个简单的比如说现在要实现下图的效果：&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;也是束手无策了一阵子，终于在g">
+<meta name="twitter:image" content="http://yoursite.com/2018/01/29/element-ui/img/renderFn.png">
 
 
 
@@ -119,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/01/04/test-my-site/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/01/29/element-ui/"/>
 
 
 
 
 
-  <title>test_my_site | Panthers pit</title>
+  <title>element-ui的render-header属性 | Panthers pit</title>
   
 
 
@@ -252,7 +255,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/04/test-my-site/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/29/element-ui/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="bug-hky">
@@ -269,7 +272,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">test_my_site</h1>
+          <h1 class="post-title" itemprop="name headline">element-ui的render-header属性</h1>
         
 
         <div class="post-meta">
@@ -281,8 +284,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-04T13:42:03+08:00">
-                2018-01-04
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-29T00:40:22+08:00">
+                2018-01-29
               </time>
             
 
@@ -299,7 +302,7 @@
 
           
           
-             <span id="/2018/01/04/test-my-site/" class="leancloud_visitors" data-flag-title="test_my_site">
+             <span id="/2018/01/29/element-ui/" class="leancloud_visitors" data-flag-title="element-ui的render-header属性">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -330,7 +333,10 @@
       
 
       
-        
+        <p>&ensp;&ensp;&ensp;&ensp;这一阵子使用element-ui的时候，一直苦恼于它table组件里的表头的改造。好不容易把样式重置了一遍，现在有需要加N多自定义的样式，类似于表头的筛选，下拉之类的都比较常规，官方文档上面都有详细的教程。那么如果想要自定义该怎么办?先来个简单的比如说现在要实现下图的效果：<br><!-- ![renderFn](source/images/renderFn.png)<br/> --><br>&ensp;&ensp;&ensp;&ensp;也是束手无策了一阵子，终于在github上找到了答案 =&gt; Render Functions，render函数。平时写组件都是一个套路，用template标签构造模板，再在里面做文章。表头支持headerRender属性来自定义表头。<br><a id="more"></a><br><strong>1.编写headerRender函数(用renderHeader属性创建DOM节点，用来渲染自定义表格头部，将函数作为同名属性传入需要自定义的列el-table-column)</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">/* panther */</span><br><span class="line">  renderHeader (creatElement, &#123; column, $index &#125;) &#123;</span><br><span class="line">          let tips = []; // 构建表头需要自定义的提示语数组</span><br><span class="line">          let num = 0;</span><br><span class="line">          for (let i = 0; i &lt;= this.showColumnsLength; i++) &#123;</span><br><span class="line">            if (i === $index) &#123;</span><br><span class="line">              if ($index === 4) &#123;</span><br><span class="line">                tips.push(&apos;Estimated poastage from EzeeShip with your package information.&apos;);</span><br><span class="line">              &#125; else &#123;</span><br><span class="line">                tips.push(&apos;Carriers estimated postage with your package actual information.&apos;);</span><br><span class="line">              &#125;</span><br><span class="line">            &#125; else &#123;</span><br><span class="line">              tips.push(num++);</span><br><span class="line">            &#125;</span><br><span class="line">          &#125;</span><br><span class="line">          let tip = tips[$index]; // 需要鼠标划上显示的提示语</span><br><span class="line">          if (tip) &#123;</span><br><span class="line">            return creatElement(&apos;p&apos;, [</span><br><span class="line">              column.label,</span><br><span class="line">              creatElement(</span><br><span class="line">                &apos;el-tooltip&apos;,</span><br><span class="line">                &#123;</span><br><span class="line">                  class: &apos;cell-s-tip&apos;,</span><br><span class="line">                  props: &#123;</span><br><span class="line">                    content: tip,</span><br><span class="line">                    effect: &apos;dark&apos;,</span><br><span class="line">                    placement: &apos;top&apos;</span><br><span class="line">                  &#125;</span><br><span class="line">                &#125;,</span><br><span class="line">                [</span><br><span class="line">                  creatElement(&apos;i&apos;, &#123;</span><br><span class="line">                    class: &apos;iconfont icon-ic_postagesquestion questionTips&apos;</span><br><span class="line">                  &#125;)</span><br><span class="line">                ]</span><br><span class="line">              )</span><br><span class="line">            ]);</span><br><span class="line">          &#125; else &#123;</span><br><span class="line">            return column.label;</span><br><span class="line">          &#125;</span><br><span class="line">      &#125;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure></p>
+<p><strong>2.给需要自定义表头额的列的标签加上属性header-render，可选的为添加的DOM添加CSS样式</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;el-table-column :label=&quot;xxx&quot; width=&quot;xxx&quot;  align=&quot;xxx&quot; headerAlign=&quot;xxx&quot; :render-header=&quot;renderHeader&quot; &gt;</span><br><span class="line">          &lt;template scope=&quot;scope&quot;&gt;</span><br><span class="line">            &lt;span&gt;&#123;&#123;scope.row.xxx&#125;&#125;&lt;/span&gt;</span><br><span class="line">          &lt;/template&gt;</span><br><span class="line">&lt;/el-table-column&gt;</span><br></pre></td></tr></table></figure></p>
+<p>撸出来大概就是这样一个效果:<br><br><img src="img/renderFn.png" alt="renderFn"><br><br>&ensp;&ensp;&ensp;&ensp;最近没什么时间来写博客，项目的需求改得太频繁。赶上甲方开大了，本来人手就不够，还有时不时掉线的队友，只能先猥琐发育，而后徐徐图之。</p>
+
       
     </div>
     
@@ -345,6 +351,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/element-UI/" rel="tag"># element-UI</a>
+          
+        </div>
+      
 
       
       
@@ -354,8 +366,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/01/04/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2018/01/06/vue-pit/" rel="next" title="第一滴血">
+                <i class="fa fa-chevron-left"></i> 第一滴血
               </a>
             
           </div>
@@ -363,10 +375,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/01/04/why-code/" rel="prev" title="写在前面">
-                写在前面 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -447,7 +455,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
