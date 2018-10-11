@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;如今业界的CSS3大神还是非常多的，逛稀土，简书等都能时不时的看到一篇优雅的讲述css3奇淫巧技的干货，就像捡到了八倍镜和马格南的瞬间。我就想在填坑的同时总结一些用法，不时的更新一下，方便自己查了。layout:元素等间距排放相同样式的元素水平布局，相邻元素间间隔已知。calc()函数支持 ‘+’, ‘-’, ‘’, ‘/’ 运算，可以单一或混合使用">
+<meta name="description" content="&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;如今业界的CSS3大神还是非常多的，逛稀土，简书等都能时不时的看到一篇优雅的讲述css3奇淫巧技的干货，就像捡到了八倍镜和马格南的瞬间。我就想在填坑的同时总结一些用法，不时的更新一下，方便自己查了。layout:元素等间距排放  相同样式的元素水平布局，相邻元素间间隔已知。calc()函数支持 ‘+’, ‘-’, ‘’, ‘/’ 运算，可以单一或混合">
 <meta name="keywords" content="css3">
 <meta property="og:type" content="article">
 <meta property="og:title" content="css3的使用总结">
 <meta property="og:url" content="http://yoursite.com/2018/03/12/css3/index.html">
 <meta property="og:site_name" content="Panthers pit">
-<meta property="og:description" content="&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;如今业界的CSS3大神还是非常多的，逛稀土，简书等都能时不时的看到一篇优雅的讲述css3奇淫巧技的干货，就像捡到了八倍镜和马格南的瞬间。我就想在填坑的同时总结一些用法，不时的更新一下，方便自己查了。layout:元素等间距排放相同样式的元素水平布局，相邻元素间间隔已知。calc()函数支持 ‘+’, ‘-’, ‘’, ‘/’ 运算，可以单一或混合使用">
+<meta property="og:description" content="&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;如今业界的CSS3大神还是非常多的，逛稀土，简书等都能时不时的看到一篇优雅的讲述css3奇淫巧技的干货，就像捡到了八倍镜和马格南的瞬间。我就想在填坑的同时总结一些用法，不时的更新一下，方便自己查了。layout:元素等间距排放  相同样式的元素水平布局，相邻元素间间隔已知。calc()函数支持 ‘+’, ‘-’, ‘’, ‘/’ 运算，可以单一或混合">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-19T10:25:03.088Z">
+<meta property="og:updated_time" content="2018-10-11T14:49:32.961Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="css3的使用总结">
-<meta name="twitter:description" content="&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;如今业界的CSS3大神还是非常多的，逛稀土，简书等都能时不时的看到一篇优雅的讲述css3奇淫巧技的干货，就像捡到了八倍镜和马格南的瞬间。我就想在填坑的同时总结一些用法，不时的更新一下，方便自己查了。layout:元素等间距排放相同样式的元素水平布局，相邻元素间间隔已知。calc()函数支持 ‘+’, ‘-’, ‘’, ‘/’ 运算，可以单一或混合使用">
+<meta name="twitter:description" content="&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;如今业界的CSS3大神还是非常多的，逛稀土，简书等都能时不时的看到一篇优雅的讲述css3奇淫巧技的干货，就像捡到了八倍镜和马格南的瞬间。我就想在填坑的同时总结一些用法，不时的更新一下，方便自己查了。layout:元素等间距排放  相同样式的元素水平布局，相邻元素间间隔已知。calc()函数支持 ‘+’, ‘-’, ‘’, ‘/’ 运算，可以单一或混合">
 
 
 
@@ -331,15 +331,15 @@
       
 
       
-        <p>&ensp;&ensp;&ensp;&ensp;如今业界的CSS3大神还是非常多的，逛稀土，简书等都能时不时的看到一篇优雅的讲述css3奇淫巧技的干货，就像捡到了八倍镜和马格南的瞬间。我就想在填坑的同时总结一些用法，不时的更新一下，方便自己查了。<br><strong>layout:</strong><br><em>元素等间距排放</em><br>相同样式的元素水平布局，相邻元素间间隔已知。calc()函数支持 ‘+’, ‘-’, ‘<em>’, ‘/’ 运算，可以单一或混合使用。（‘+’‘-’号前后需要加上空格，‘</em>’‘/’号后面不需要）=&gt;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">width: calc((100% - 已知间隔 * (元素个数 - 1)) / 元素个数)</span><br></pre></td></tr></table></figure></p>
-<a id="more"></a>
-<p>在less中写法不一样<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">calc(~&quot;100% - 已知间隔&quot;)</span><br></pre></td></tr></table></figure></p>
-<p><em>元素水平居中:</em><br>1.display: inline-block + text-align: center<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">.parent&#123;</span><br><span class="line">  display: inline-block</span><br><span class="line">&#125;</span><br><span class="line">.child&#123;</span><br><span class="line">  text-align: center</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>=&gt;兼容ie与主流浏览器，但是子元素的内容也会居中<br>2.display: table + margin:0 auto<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">.parent&#123;</span><br><span class="line">  display: inline-block</span><br><span class="line">&#125;</span><br><span class="line">.child&#123;</span><br><span class="line">  text-align: center</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>=&gt;兼容ie8+，但是div &lt;=&gt; table<br>3.display: table + margin:0 auto<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">.parent&#123;</span><br><span class="line">&#125;</span><br><span class="line">.child&#123;</span><br><span class="line">  display:table;</span><br><span class="line">  margin:0 auto;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>=&gt;兼容ie8+，但是div &lt;=&gt; table<br>3.position: absolute + transform<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.parent&#123;</span><br><span class="line">  position: relative;</span><br><span class="line">&#125;</span><br><span class="line">.child&#123;</span><br><span class="line">  position: absolute;</span><br><span class="line">  left: 50%;</span><br><span class="line">  transform:translateX(-50%);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>=&gt;兼容性高版本浏览器要加前缀，但是这种不影响其他元素<br>4.position: flex + margin<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">.parent&#123;</span><br><span class="line">  display: flex;</span><br><span class="line">&#125;</span><br><span class="line">.child&#123;</span><br><span class="line">  margin: 0 auto;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>=&gt;兼容性高版本浏览器要加前缀，但是这种不影响其他元素</p>
+        <p>&ensp;&ensp;&ensp;&ensp;如今业界的CSS3大神还是非常多的，逛稀土，简书等都能时不时的看到一篇优雅的讲述css3奇淫巧技的干货，就像捡到了八倍镜和马格南的瞬间。我就想在填坑的同时总结一些用法，不时的更新一下，方便自己查了。<br><strong>layout:</strong><br><em>元素等间距排放</em><br>  相同样式的元素水平布局，相邻元素间间隔已知。calc()函数支持 ‘+’, ‘-’, ‘<em>’, ‘/’ 运算，可以单一或混合使用。（‘+’‘-’号前后需要加上空格，‘</em>’‘/’号后面不需要）=&gt;<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">width: calc((100% - 已知间隔 * (元素个数 - 1)) / 元素个数)</span><br></pre></td></tr></table></figure></p>
+  <a id="more"></a>
+<p>  在less中写法不一样<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">calc(~&quot;100% - 已知间隔&quot;)</span><br></pre></td></tr></table></figure></p>
+<p><em>元素水平居中:</em><br>  1.display: inline-block + text-align: center<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">.parent&#123;</span><br><span class="line">  display: inline-block</span><br><span class="line">&#125;</span><br><span class="line">.child&#123;</span><br><span class="line">  text-align: center</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>  =&gt;兼容ie与主流浏览器，但是子元素的内容也会居中<br>  2.display: table + margin:0 auto<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">.parent&#123;</span><br><span class="line">  display: inline-block</span><br><span class="line">&#125;</span><br><span class="line">.child&#123;</span><br><span class="line">  text-align: center</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>  =&gt;兼容ie8+，但是div &lt;=&gt; table<br>  3.display: table + margin:0 auto<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">.parent&#123;</span><br><span class="line">&#125;</span><br><span class="line">.child&#123;</span><br><span class="line">  display:table;</span><br><span class="line">  margin:0 auto;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>  =&gt;兼容ie8+，但是div &lt;=&gt; table<br>  3.position: absolute + transform<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.parent&#123;</span><br><span class="line">  position: relative;</span><br><span class="line">&#125;</span><br><span class="line">.child&#123;</span><br><span class="line">  position: absolute;</span><br><span class="line">  left: 50%;</span><br><span class="line">  transform:translateX(-50%);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>  =&gt;兼容性高版本浏览器要加前缀，但是这种不影响其他元素<br>  4.position: flex + margin<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">.parent&#123;</span><br><span class="line">  display: flex;</span><br><span class="line">&#125;</span><br><span class="line">.child&#123;</span><br><span class="line">  margin: 0 auto;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>  =&gt;兼容性高版本浏览器要加前缀，但是这种不影响其他元素<br><em>弹性布局</em><br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">display: flex;</span><br><span class="line">flex-flow: row/column nowrap;</span><br><span class="line">justify-contnet: felx-start/flex-end/center/space-between/space-around;</span><br><span class="line">align-items: flex-start/flex-end/center</span><br></pre></td></tr></table></figure></p>
 <p>&lt;/待续&gt;</p>
 
       
@@ -381,8 +381,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/04/19/motherFucker/" rel="prev" title="MD也不知道起个什么名字">
-                MD也不知道起个什么名字 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/04/19/motherFucker/" rel="prev" title="4-19也不知道起个什么名字">
+                4-19也不知道起个什么名字 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -451,7 +451,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -464,7 +464,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
