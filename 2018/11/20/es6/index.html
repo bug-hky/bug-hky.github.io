@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="js," />
 
 
 
@@ -79,17 +79,18 @@
 
 
 
-<meta name="description" content="Pleasure comes through toil.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="分类">
-<meta property="og:url" content="http://yoursite.com/categories/index.html">
+<meta name="description" content="&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;js有一些优雅的写法可以避免增加自己代码后期的维护成本，实际上以前有些的写法过于冗余，也违背了do not repeat yourself 的原则。">
+<meta name="keywords" content="js">
+<meta property="og:type" content="article">
+<meta property="og:title" content="js的一些优雅写法">
+<meta property="og:url" content="http://yoursite.com/2018/11/20/es6/index.html">
 <meta property="og:site_name" content="Panthers pit">
-<meta property="og:description" content="Pleasure comes through toil.">
+<meta property="og:description" content="&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;js有一些优雅的写法可以避免增加自己代码后期的维护成本，实际上以前有些的写法过于冗余，也违背了do not repeat yourself 的原则。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-06T14:13:42.374Z">
+<meta property="og:updated_time" content="2018-11-20T15:42:48.605Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="分类">
-<meta name="twitter:description" content="Pleasure comes through toil.">
+<meta name="twitter:title" content="js的一些优雅写法">
+<meta name="twitter:description" content="&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;js有一些优雅的写法可以避免增加自己代码后期的维护成本，实际上以前有些的写法过于冗余，也违背了do not repeat yourself 的原则。">
 
 
 
@@ -119,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/categories/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/11/20/es6/"/>
 
 
 
 
 
-  <title>分类 | Panthers pit</title>
+  <title>js的一些优雅写法 | Panthers pit</title>
   
 
 
@@ -240,40 +241,179 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/20/es6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="bug-hky">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Panthers pit">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">分类</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <div class="category-all-page">
-            <div class="category-all-title">
-                暂无分类
-            </div>
-            <div class="category-all">
+          <h1 class="post-title" itemprop="name headline">js的一些优雅写法</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
               
-            </div>
-          </div>
-        
-      </div>
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-20T21:00:00+08:00">
+                2018-11-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2018/11/20/es6/" class="leancloud_visitors" data-flag-title="js的一些优雅写法">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <p>&ensp;&ensp;&ensp;&ensp;js有一些优雅的写法可以避免增加自己代码后期的维护成本，实际上以前有些的写法过于冗余，也违背了do not repeat yourself 的原则。<br><a id="more"></a></p>
+<h1 id="多元判断的业务场景"><a href="#多元判断的业务场景" class="headerlink" title="多元判断的业务场景"></a>多元判断的业务场景</h1><p>  &ensp;&ensp;&ensp;&ensp;if/else/switch在一般的业务场景下其实已经够用了，但是在碰到多元的条件判断时，由于时间紧，往往便选择了if/else嵌套的方式来实现，这种方式实际上既增加了代码量，又多写了重复的判断条件以及同样的操作。</p>
+<h2 id="场景"><a href="#场景" class="headerlink" title="场景"></a>场景</h2><pre><code>/*
+admin: 多级销售 &amp;&amp; 多级用户 &amp;&amp; 游客
+&gt;&gt; userType: custom =&gt; 客户 || sales =&gt; 销售
+&gt;&gt; level: 1 =&gt; level1 || 2 =&gt; level2 || 3 =&gt; level3 || 4 =&gt; level4 || 5 =&gt; level5
+*/
+const funcs = new Map([
+  [&apos;custom_1&apos;, ()=&gt;{}],
+  [&apos;custom_2&apos;, ()=&gt;{}],
+  [&apos;custom_3&apos;, ()=&gt;{}],
+  [&apos;custom_4&apos;, ()=&gt;{}],
+  [&apos;custom_5&apos;, ()=&gt;{}],
+  [&apos;sales_1&apos;, ()=&gt;{}],
+  [&apos;sales_2&apos;, ()=&gt;{}],
+  [&apos;sales_3&apos;, ()=&gt;{}],
+  [&apos;sales_4&apos;, ()=&gt;{}],
+  [&apos;sales_5&apos;, ()=&gt;{}],
+  [&apos;tourist&apos;, ()=&gt;{}],
+])
+
+const doSth = (userType, level)=&gt;{
+  let action = funcs.get(`${userType}_${level}`) || funcs.get(&apos;tourist&apos;)
+  action.call(this)
+}
+</code></pre>
       
     </div>
     
     
     
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/js/" rel="tag"># js</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/11/04/hello-world/" rel="next" title="本地项目push操作同步到coding.net与github上">
+                <i class="fa fa-chevron-left"></i> 本地项目push操作同步到coding.net与github上
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -306,8 +446,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -358,6 +507,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#多元判断的业务场景"><span class="nav-number">1.</span> <span class="nav-text">多元判断的业务场景</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#场景"><span class="nav-number">1.1.</span> <span class="nav-text">场景</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
