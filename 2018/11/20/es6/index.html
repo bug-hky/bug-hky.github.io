@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;js有一些优雅的写法可以避免增加自己代码后期的维护成本，实际上以前有些的写法过于冗余，也违背了do not repeat yourself 的原则。">
+<meta name="description" content="&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;js进化成es6/7/8之后，有一些优雅的写法可以避免增加自己代码后期维护的时间成本，实际上es5和jquery制霸的时候有些的写法太过糟糕，也违背了do not repeat yourself 的原则。其实也有办法，会有些麻烦，所以有些重复的代码由于项目周期等不可抗力，并没有时间来优化，久而久之形成习惯对开发者是一件挺可怕的事，当然对于一些对产品质">
 <meta name="keywords" content="js">
 <meta property="og:type" content="article">
 <meta property="og:title" content="js的一些优雅写法">
 <meta property="og:url" content="http://yoursite.com/2018/11/20/es6/index.html">
 <meta property="og:site_name" content="Panthers pit">
-<meta property="og:description" content="&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;js有一些优雅的写法可以避免增加自己代码后期的维护成本，实际上以前有些的写法过于冗余，也违背了do not repeat yourself 的原则。">
+<meta property="og:description" content="&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;js进化成es6/7/8之后，有一些优雅的写法可以避免增加自己代码后期维护的时间成本，实际上es5和jquery制霸的时候有些的写法太过糟糕，也违背了do not repeat yourself 的原则。其实也有办法，会有些麻烦，所以有些重复的代码由于项目周期等不可抗力，并没有时间来优化，久而久之形成习惯对开发者是一件挺可怕的事，当然对于一些对产品质">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-20T15:42:48.605Z">
+<meta property="og:updated_time" content="2018-11-24T10:56:22.682Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="js的一些优雅写法">
-<meta name="twitter:description" content="&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;js有一些优雅的写法可以避免增加自己代码后期的维护成本，实际上以前有些的写法过于冗余，也违背了do not repeat yourself 的原则。">
+<meta name="twitter:description" content="&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;js进化成es6/7/8之后，有一些优雅的写法可以避免增加自己代码后期维护的时间成本，实际上es5和jquery制霸的时候有些的写法太过糟糕，也违背了do not repeat yourself 的原则。其实也有办法，会有些麻烦，所以有些重复的代码由于项目周期等不可抗力，并没有时间来优化，久而久之形成习惯对开发者是一件挺可怕的事，当然对于一些对产品质">
 
 
 
@@ -331,8 +331,12 @@
       
 
       
-        <p>&ensp;&ensp;&ensp;&ensp;js有一些优雅的写法可以避免增加自己代码后期的维护成本，实际上以前有些的写法过于冗余，也违背了do not repeat yourself 的原则。<br><a id="more"></a></p>
-<h1 id="多元判断的业务场景"><a href="#多元判断的业务场景" class="headerlink" title="多元判断的业务场景"></a>多元判断的业务场景</h1><p>  &ensp;&ensp;&ensp;&ensp;if/else/switch在一般的业务场景下其实已经够用了，但是在碰到多元的条件判断时，由于时间紧，往往便选择了if/else嵌套的方式来实现，这种方式实际上既增加了代码量，又多写了重复的判断条件以及同样的操作。</p>
+        <p>&ensp;&ensp;&ensp;&ensp;js进化成es6/7/8之后，有一些优雅的写法可以避免增加自己代码后期维护的时间成本，实际上es5和jquery制霸的时候有些的写法太过糟糕，也违背了do not repeat yourself 的原则。其实也有办法，会有些麻烦，所以有些重复的代码由于项目周期等不可抗力，并没有时间来优化，久而久之形成习惯对开发者是一件挺可怕的事，当然对于一些对产品质量没有底线的项目甲方来说这些无关紧要，但这对于迭代项目简直是灾难，这点也是参与迭代项目后体会到的。还有es6本身新增的一些拓展也十分的强大，至少我在项目中运用到的可能连它十分之一都没有用到。并且自己的写法过于冗长，可读性基本没有，想实现业务有很多种办法，毕竟现在有了mvvm，更是随心所欲，es6其实有很多方法法可以优化我们的项目，总结一部分，以便于梳理以后写东西的思路。<br><a id="more"></a></p>
+<h1 id="数组去重"><a href="#数组去重" class="headerlink" title="数组去重"></a>数组去重</h1><p>  去重是非常常见的操作了<br>  Set本身是一个构造函数，和数组长得很像，但是没有重复值，所以可以利用这一特性做一些事，…是拓展运算符，可以把部分数据结构转化为数组(Map &amp; Set)，原理是通过调用Symbol.iterator，这和array.from方法有本质的区别。 </p>
+<h2 id="基础数组"><a href="#基础数组" class="headerlink" title="基础数组"></a>基础数组</h2><pre><code>const arr = [1, 2, 2, 3, 4, 5];
+[...newSet(arr)]
+=&gt; [1, 2, 3, 4, 5]
+</code></pre><h1 id="二元或多元复杂条件判断"><a href="#二元或多元复杂条件判断" class="headerlink" title="二元或多元复杂条件判断"></a>二元或多元复杂条件判断</h1><p>  if/else/switch在一般的业务场景下其实已经够用了，但是在碰到多元的条件判断时，由于时间紧，往往便选择了if/else嵌套的方式来实现，这种方式实际上既增加了代码量，又多写了重复的判断条件以及同样的操作。</p>
 <h2 id="场景"><a href="#场景" class="headerlink" title="场景"></a>场景</h2><pre><code>/*
 admin: 多级销售 &amp;&amp; 多级用户 &amp;&amp; 游客
 &gt;&gt; userType: custom =&gt; 客户 || sales =&gt; 销售
@@ -354,7 +358,7 @@ const funcs = new Map([
 
 const doSth = (userType, level)=&gt;{
   let action = funcs.get(`${userType}_${level}`) || funcs.get(&apos;tourist&apos;)
-  action.call(this)
+  action();
 }
 </code></pre>
       
@@ -517,7 +521,7 @@ const doSth = (userType, level)=&gt;{
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#多元判断的业务场景"><span class="nav-number">1.</span> <span class="nav-text">多元判断的业务场景</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#场景"><span class="nav-number">1.1.</span> <span class="nav-text">场景</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#数组去重"><span class="nav-number">1.</span> <span class="nav-text">数组去重</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#基础数组"><span class="nav-number">1.1.</span> <span class="nav-text">基础数组</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二元或多元复杂条件判断"><span class="nav-number">2.</span> <span class="nav-text">二元或多元复杂条件判断</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#场景"><span class="nav-number">2.1.</span> <span class="nav-text">场景</span></a></li></ol></li></ol></div>
             
 
           </div>
