@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Panthers pit">
 <meta property="og:description" content="&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;js进化成es6/7/8之后，有一些优雅的写法可以避免增加自己代码后期维护的时间成本，实际上es5和jquery制霸的时候有些的写法太过糟糕，也违背了do not repeat yourself 的原则。其实也有办法，会有些麻烦，所以有些重复的代码由于项目周期等不可抗力，并没有时间来优化，久而久之形成习惯对开发者是一件挺可怕的事，当然对于一些对产品质">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-12-19T11:02:27.121Z">
+<meta property="og:updated_time" content="2018-12-20T02:35:44.117Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="es6的一些优雅写法">
 <meta name="twitter:description" content="&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;js进化成es6/7/8之后，有一些优雅的写法可以避免增加自己代码后期维护的时间成本，实际上es5和jquery制霸的时候有些的写法太过糟糕，也违背了do not repeat yourself 的原则。其实也有办法，会有些麻烦，所以有些重复的代码由于项目周期等不可抗力，并没有时间来优化，久而久之形成习惯对开发者是一件挺可怕的事，当然对于一些对产品质">
@@ -336,7 +336,7 @@
 <h2 id="基础数组"><a href="#基础数组" class="headerlink" title="基础数组"></a>基础数组</h2><pre><code>const arr = [1, 2, 2, 3, 4, 5];
 [...newSet(arr)]
 =&gt; [1, 2, 3, 4, 5]
-</code></pre><h1 id="二元或多元复杂条件判断"><a href="#二元或多元复杂条件判断" class="headerlink" title="二元或多元复杂条件判断"></a>二元或多元复杂条件判断</h1><p>  if/else/switch在一般的业务场景下其实已经够用了，但是在碰到多元的条件判断时，由于时间紧，往往便选择了if/else嵌套的方式来实现，这种方式实际上既增加了代码量，又多写了重复的判断条件以及同样的操作。</p>
+</code></pre><h1 id="复杂条件判断"><a href="#复杂条件判断" class="headerlink" title="复杂条件判断"></a>复杂条件判断</h1><p>  if/else/switch在一般的业务场景下其实已经够用了，但是在碰到多元的条件判断时，由于时间紧，往往便选择了if/else嵌套的方式来实现，这种方式实际上既增加了代码量，又多写了重复的判断条件以及同样的操作。</p>
 <h2 id="场景"><a href="#场景" class="headerlink" title="场景"></a>场景</h2><pre><code>/*
 admin: 多级销售 &amp;&amp; 多级用户 &amp;&amp; 游客
 &gt;&gt; userType: custom =&gt; 客户 || sales =&gt; 销售
@@ -360,7 +360,8 @@ const doSth = (userType, level)=&gt;{
   let action = funcs.get(`${userType}_${level}`) || funcs.get(&apos;tourist&apos;)
   action();
 }
-</code></pre>
+</code></pre><h1 id="this相关"><a href="#this相关" class="headerlink" title="this相关"></a>this相关</h1><h2 id="函数防抖的this指向问题"><a href="#函数防抖的this指向问题" class="headerlink" title="函数防抖的this指向问题"></a>函数防抖的this指向问题</h2><p>  使用lodash库来做函数防抖的时候箭头函数中的this指向的是window, 而在普通匿名函数中的this指向的是context.</p>
+
       
     </div>
     
@@ -521,7 +522,7 @@ const doSth = (userType, level)=&gt;{
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#数组去重"><span class="nav-number">1.</span> <span class="nav-text">数组去重</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#基础数组"><span class="nav-number">1.1.</span> <span class="nav-text">基础数组</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二元或多元复杂条件判断"><span class="nav-number">2.</span> <span class="nav-text">二元或多元复杂条件判断</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#场景"><span class="nav-number">2.1.</span> <span class="nav-text">场景</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#数组去重"><span class="nav-number">1.</span> <span class="nav-text">数组去重</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#基础数组"><span class="nav-number">1.1.</span> <span class="nav-text">基础数组</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#复杂条件判断"><span class="nav-number">2.</span> <span class="nav-text">复杂条件判断</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#场景"><span class="nav-number">2.1.</span> <span class="nav-text">场景</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#this相关"><span class="nav-number">3.</span> <span class="nav-text">this相关</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#函数防抖的this指向问题"><span class="nav-number">3.1.</span> <span class="nav-text">函数防抖的this指向问题</span></a></li></ol></li></ol></div>
             
 
           </div>
