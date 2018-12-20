@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Panthers pit">
 <meta property="og:description" content="&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;js进化成es6/7/8之后，有一些优雅的写法可以避免增加自己代码后期维护的时间成本，实际上es5和jquery制霸的时候有些的写法太过糟糕，也违背了do not repeat yourself 的原则。其实也有办法，会有些麻烦，所以有些重复的代码由于项目周期等不可抗力，并没有时间来优化，久而久之形成习惯对开发者是一件挺可怕的事，当然对于一些对产品质">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-12-20T02:35:44.117Z">
+<meta property="og:updated_time" content="2018-12-20T02:39:31.781Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="es6的一些优雅写法">
 <meta name="twitter:description" content="&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;js进化成es6/7/8之后，有一些优雅的写法可以避免增加自己代码后期维护的时间成本，实际上es5和jquery制霸的时候有些的写法太过糟糕，也违背了do not repeat yourself 的原则。其实也有办法，会有些麻烦，所以有些重复的代码由于项目周期等不可抗力，并没有时间来优化，久而久之形成习惯对开发者是一件挺可怕的事，当然对于一些对产品质">
@@ -360,8 +360,8 @@ const doSth = (userType, level)=&gt;{
   let action = funcs.get(`${userType}_${level}`) || funcs.get(&apos;tourist&apos;)
   action();
 }
-</code></pre><h1 id="this相关"><a href="#this相关" class="headerlink" title="this相关"></a>this相关</h1><h2 id="函数防抖的this指向问题"><a href="#函数防抖的this指向问题" class="headerlink" title="函数防抖的this指向问题"></a>函数防抖的this指向问题</h2><p>  使用lodash库来做函数防抖的时候箭头函数中的this指向的是window, 而在普通匿名函数中的this指向的是context.</p>
-
+</code></pre><h1 id="this相关"><a href="#this相关" class="headerlink" title="this相关"></a>this相关</h1><h2 id="函数防抖的this指向问题"><a href="#函数防抖的this指向问题" class="headerlink" title="函数防抖的this指向问题"></a>函数防抖的this指向问题</h2><pre><code>使用lodash库来做函数防抖的时候箭头函数中的this指向的是window, 而在普通匿名函数中的this指向的是context.
+</code></pre>
       
     </div>
     
