@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;js进化成es6/7/8之后，有一些优雅的写法可以避免增加自己代码后期维护的时间成本，实际上es5和jquery制霸的时候有些的写法太过糟糕，也违背了do not repeat yourself 的原则。其实也有办法，会有些麻烦，所以有些重复的代码由于项目周期等不可抗力，并没有时间来优化，久而久之形成习惯对开发者是一件挺可怕的事，当然对于一些对产品质">
+<meta name="description" content="&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;js进化成es6/7/8之后，有一些优雅的写法可以避免增加自己代码后期维护的时间成本，实际上es5和jquery制霸的时候有些的写法太过糟糕。其实也有办法，会有些麻烦，所以有些重复的代码由于项目周期等不可抗力，并没有时间来优化，久而久之形成习惯对开发者是一件挺可怕的事，当然对于一些对产品质量没有底线的项目甲方来说这些无关紧要，但这对于迭代项目简直是灾">
 <meta name="keywords" content="js">
 <meta property="og:type" content="article">
 <meta property="og:title" content="es6的一些优雅写法">
 <meta property="og:url" content="http://yoursite.com/2018/11/20/es6/index.html">
 <meta property="og:site_name" content="Panthers pit">
-<meta property="og:description" content="&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;js进化成es6/7/8之后，有一些优雅的写法可以避免增加自己代码后期维护的时间成本，实际上es5和jquery制霸的时候有些的写法太过糟糕，也违背了do not repeat yourself 的原则。其实也有办法，会有些麻烦，所以有些重复的代码由于项目周期等不可抗力，并没有时间来优化，久而久之形成习惯对开发者是一件挺可怕的事，当然对于一些对产品质">
+<meta property="og:description" content="&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;js进化成es6/7/8之后，有一些优雅的写法可以避免增加自己代码后期维护的时间成本，实际上es5和jquery制霸的时候有些的写法太过糟糕。其实也有办法，会有些麻烦，所以有些重复的代码由于项目周期等不可抗力，并没有时间来优化，久而久之形成习惯对开发者是一件挺可怕的事，当然对于一些对产品质量没有底线的项目甲方来说这些无关紧要，但这对于迭代项目简直是灾">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-12-20T02:39:31.781Z">
+<meta property="og:updated_time" content="2019-03-05T10:04:46.647Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="es6的一些优雅写法">
-<meta name="twitter:description" content="&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;js进化成es6/7/8之后，有一些优雅的写法可以避免增加自己代码后期维护的时间成本，实际上es5和jquery制霸的时候有些的写法太过糟糕，也违背了do not repeat yourself 的原则。其实也有办法，会有些麻烦，所以有些重复的代码由于项目周期等不可抗力，并没有时间来优化，久而久之形成习惯对开发者是一件挺可怕的事，当然对于一些对产品质">
+<meta name="twitter:description" content="&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;js进化成es6/7/8之后，有一些优雅的写法可以避免增加自己代码后期维护的时间成本，实际上es5和jquery制霸的时候有些的写法太过糟糕。其实也有办法，会有些麻烦，所以有些重复的代码由于项目周期等不可抗力，并没有时间来优化，久而久之形成习惯对开发者是一件挺可怕的事，当然对于一些对产品质量没有底线的项目甲方来说这些无关紧要，但这对于迭代项目简直是灾">
 
 
 
@@ -331,7 +331,7 @@
       
 
       
-        <p>&ensp;&ensp;&ensp;&ensp;js进化成es6/7/8之后，有一些优雅的写法可以避免增加自己代码后期维护的时间成本，实际上es5和jquery制霸的时候有些的写法太过糟糕，也违背了do not repeat yourself 的原则。其实也有办法，会有些麻烦，所以有些重复的代码由于项目周期等不可抗力，并没有时间来优化，久而久之形成习惯对开发者是一件挺可怕的事，当然对于一些对产品质量没有底线的项目甲方来说这些无关紧要，但这对于迭代项目简直是灾难，这点也是参与迭代项目后体会到的。还有es6本身新增的一些拓展也十分的强大，至少我在项目中运用到的可能连它十分之一都没有用到。并且自己的写法过于冗长，可读性基本没有，想实现业务有很多种办法，毕竟现在有了mvvm，更是随心所欲，es6其实有很多方法法可以优化我们的项目，总结一部分，以便于梳理以后写东西的思路。<br><a id="more"></a></p>
+        <p>&ensp;&ensp;&ensp;&ensp;js进化成es6/7/8之后，有一些优雅的写法可以避免增加自己代码后期维护的时间成本，实际上es5和jquery制霸的时候有些的写法太过糟糕。其实也有办法，会有些麻烦，所以有些重复的代码由于项目周期等不可抗力，并没有时间来优化，久而久之形成习惯对开发者是一件挺可怕的事，当然对于一些对产品质量没有底线的项目甲方来说这些无关紧要，但这对于迭代项目简直是灾难，这点也是参与迭代项目后体会到的。还有es6本身新增的一些拓展也十分的强大，至少我在项目中运用到的可能连它十分之一都没有用到。并且自己的写法过于冗长，可读性基本没有，想实现业务有很多种办法，毕竟现在有了mvvm，更是随心所欲，es6其实有很多方法法可以优化我们的项目，总结一部分，以便于梳理以后写东西的思路。<br><a id="more"></a></p>
 <h1 id="数组去重"><a href="#数组去重" class="headerlink" title="数组去重"></a>数组去重</h1><p>  去重是非常常见的操作了<br>  Set本身是一个构造函数，和数组长得很像，但是没有重复值，所以可以利用这一特性做一些事，…是拓展运算符，可以把部分数据结构转化为数组(Map &amp; Set)，原理是通过调用Symbol.iterator，这和array.from方法有本质的区别。 </p>
 <h2 id="基础数组"><a href="#基础数组" class="headerlink" title="基础数组"></a>基础数组</h2><pre><code>const arr = [1, 2, 2, 3, 4, 5];
 [...newSet(arr)]
@@ -500,6 +500,22 @@ const doSth = (userType, level)=&gt;{
           
 
           
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/bug-hky" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-globe"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.zhihu.com/people/akun-42" target="_blank" title="知乎">
+                      
+                        <i class="fa fa-fw fa-globe"></i>知乎</a>
+                  </span>
+                
+            </div>
+          
 
           
           
@@ -542,7 +558,7 @@ const doSth = (userType, level)=&gt;{
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
