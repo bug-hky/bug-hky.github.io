@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="原因  &amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;自己想做点demo练手的时候，总是需要github和gitlab之类的托管所。我想把commit了的代码push到两个远程仓库上，又不想push两次。下面是拿github 和 coding.net举例，所以： 1.先查看一下已有的github远程库git remote -v origin  https://github.com/user/pr">
+<meta name="description" content="场景  &amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;自己想做点demo练手的时候，总是需要github和gitlab之类的托管所。我想把commit了的代码push到两个远程仓库上，又不想push两次。下面是拿github 和 coding.net举例，所以： 先查看一下已有的github远程库git remote -v origin  https://github.com/user/proj">
 <meta name="keywords" content="git">
 <meta property="og:type" content="article">
 <meta property="og:title" content="本地项目push操作同步到coding.net与github上">
 <meta property="og:url" content="http://yoursite.com/2018/11/04/hello-world/index.html">
 <meta property="og:site_name" content="Panthers pit">
-<meta property="og:description" content="原因  &amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;自己想做点demo练手的时候，总是需要github和gitlab之类的托管所。我想把commit了的代码push到两个远程仓库上，又不想push两次。下面是拿github 和 coding.net举例，所以： 1.先查看一下已有的github远程库git remote -v origin  https://github.com/user/pr">
+<meta property="og:description" content="场景  &amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;自己想做点demo练手的时候，总是需要github和gitlab之类的托管所。我想把commit了的代码push到两个远程仓库上，又不想push两次。下面是拿github 和 coding.net举例，所以： 先查看一下已有的github远程库git remote -v origin  https://github.com/user/proj">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-05T09:27:53.342Z">
+<meta property="og:updated_time" content="2019-04-29T14:47:57.574Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="本地项目push操作同步到coding.net与github上">
-<meta name="twitter:description" content="原因  &amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;自己想做点demo练手的时候，总是需要github和gitlab之类的托管所。我想把commit了的代码push到两个远程仓库上，又不想push两次。下面是拿github 和 coding.net举例，所以： 1.先查看一下已有的github远程库git remote -v origin  https://github.com/user/pr">
+<meta name="twitter:description" content="场景  &amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;自己想做点demo练手的时候，总是需要github和gitlab之类的托管所。我想把commit了的代码push到两个远程仓库上，又不想push两次。下面是拿github 和 coding.net举例，所以： 先查看一下已有的github远程库git remote -v origin  https://github.com/user/proj">
 
 
 
@@ -331,16 +331,16 @@
       
 
       
-        <h1 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h1><p>  &ensp;&ensp;&ensp;&ensp;自己想做点demo练手的时候，总是需要github和gitlab之类的托管所。我想把commit了的代码push到两个远程仓库上，又不想push两次。下面是拿github 和 coding.net举例，所以：</p>
-<h2 id="1-先查看一下已有的github远程库"><a href="#1-先查看一下已有的github远程库" class="headerlink" title="1.先查看一下已有的github远程库"></a>1.先查看一下已有的github远程库</h2><pre><code>git remote -v
+        <h1 id="场景"><a href="#场景" class="headerlink" title="场景"></a>场景</h1><p>  &ensp;&ensp;&ensp;&ensp;自己想做点demo练手的时候，总是需要github和gitlab之类的托管所。我想把commit了的代码push到两个远程仓库上，又不想push两次。下面是拿github 和 coding.net举例，所以：</p>
+<h2 id="先查看一下已有的github远程库"><a href="#先查看一下已有的github远程库" class="headerlink" title="先查看一下已有的github远程库"></a>先查看一下已有的github远程库</h2><pre><code>git remote -v
 origin  https://github.com/user/project.git (fetch)
 origin  https://github.com/user/project.git (push)
-</code></pre><h2 id="2-创建一个名为’both’的远程仓库"><a href="#2-创建一个名为’both’的远程仓库" class="headerlink" title="2.创建一个名为’both’的远程仓库"></a>2.创建一个名为’both’的远程仓库</h2><pre><code>git remote add both https://git.coding.net/XXX.git
+</code></pre><h2 id="创建一个名为’both’的远程仓库"><a href="#创建一个名为’both’的远程仓库" class="headerlink" title="创建一个名为’both’的远程仓库"></a>创建一个名为’both’的远程仓库</h2><pre><code>git remote add both https://git.coding.net/XXX.git
 </code></pre>  <a id="more"></a>
-<h2 id="3-给’both’添加push到-coding-net-与-github-仓库的指令"><a href="#3-给’both’添加push到-coding-net-与-github-仓库的指令" class="headerlink" title="3.给’both’添加push到 coding.net 与 github 仓库的指令"></a>3.给’both’添加push到 coding.net 与 github 仓库的指令</h2><pre><code>git remote set-url --add --push both https://git.coding.net/XXX.git
+<h2 id="给’both’添加push到-coding-net-与-github-仓库的指令"><a href="#给’both’添加push到-coding-net-与-github-仓库的指令" class="headerlink" title="给’both’添加push到 coding.net 与 github 仓库的指令"></a>给’both’添加push到 coding.net 与 github 仓库的指令</h2><pre><code>git remote set-url --add --push both https://git.coding.net/XXX.git
 git remote set-url --add --push both https://github.com/XXX.git
-</code></pre><h2 id="4-push前下拉代码解决冲突"><a href="#4-push前下拉代码解决冲突" class="headerlink" title="4.push前下拉代码解决冲突"></a>4.push前下拉代码解决冲突</h2><pre><code>git pull both master(branch)
-</code></pre><h2 id="5-push-both"><a href="#5-push-both" class="headerlink" title="5.push both"></a>5.push both</h2><pre><code>git pull both 如果成功就能分别看到coding.net 与 github上面的最新的版本号了
+</code></pre><h2 id="push前下拉代码解决冲突"><a href="#push前下拉代码解决冲突" class="headerlink" title="push前下拉代码解决冲突"></a>push前下拉代码解决冲突</h2><pre><code>git pull both master(branch)
+</code></pre><h2 id="push-both"><a href="#push-both" class="headerlink" title="push both"></a>push both</h2><pre><code>git push both 如果成功就能分别看到coding.net 与 github上面的最新的版本号了
 </code></pre><h3 id="也可以把pull-push操作写入script命令："><a href="#也可以把pull-push操作写入script命令：" class="headerlink" title="也可以把pull/push操作写入script命令："></a>也可以把pull/push操作写入script命令：</h3><pre><code>修改项目根目录package.json文件
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&quot;scripts&quot;: &#123;</span><br><span class="line">  ...</span><br><span class="line">  &quot;pushall&quot;: &quot;git push both&quot;,</span><br><span class="line">  &quot;pullall&quot;: &quot;git pull both&quot;</span><br><span class="line">  ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </code></pre><h3 id="也可以使用SSH，用SSH方式推送的社会大佬需要配置ssh公钥："><a href="#也可以使用SSH，用SSH方式推送的社会大佬需要配置ssh公钥：" class="headerlink" title="也可以使用SSH，用SSH方式推送的社会大佬需要配置ssh公钥："></a>也可以使用SSH，用SSH方式推送的社会大佬需要配置ssh公钥：</h3><pre><code>配置完公钥后续的操作基本一致，我也是参考了某位大佬的原文链接：
@@ -375,7 +375,7 @@ git remote set-url --add --push both https://github.com/XXX.git
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/10/09/2018.10.9/" rel="next" title="2018.10.9下班后的晚上">
+              <a href="/2018/10/09/2018-10-9/" rel="next" title="2018.10.9下班后的晚上">
                 <i class="fa fa-chevron-left"></i> 2018.10.9下班后的晚上
               </a>
             
@@ -464,7 +464,7 @@ git remote set-url --add --push both https://github.com/XXX.git
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -477,7 +477,7 @@ git remote set-url --add --push both https://github.com/XXX.git
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -526,7 +526,7 @@ git remote set-url --add --push both https://github.com/XXX.git
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#原因"><span class="nav-number">1.</span> <span class="nav-text">原因</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-先查看一下已有的github远程库"><span class="nav-number">1.1.</span> <span class="nav-text">1.先查看一下已有的github远程库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-创建一个名为’both’的远程仓库"><span class="nav-number">1.2.</span> <span class="nav-text">2.创建一个名为’both’的远程仓库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-给’both’添加push到-coding-net-与-github-仓库的指令"><span class="nav-number">1.3.</span> <span class="nav-text">3.给’both’添加push到 coding.net 与 github 仓库的指令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-push前下拉代码解决冲突"><span class="nav-number">1.4.</span> <span class="nav-text">4.push前下拉代码解决冲突</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-push-both"><span class="nav-number">1.5.</span> <span class="nav-text">5.push both</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#也可以把pull-push操作写入script命令："><span class="nav-number">1.5.1.</span> <span class="nav-text">也可以把pull/push操作写入script命令：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#也可以使用SSH，用SSH方式推送的社会大佬需要配置ssh公钥："><span class="nav-number">1.5.2.</span> <span class="nav-text">也可以使用SSH，用SSH方式推送的社会大佬需要配置ssh公钥：</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#场景"><span class="nav-number">1.</span> <span class="nav-text">场景</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#先查看一下已有的github远程库"><span class="nav-number">1.1.</span> <span class="nav-text">先查看一下已有的github远程库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建一个名为’both’的远程仓库"><span class="nav-number">1.2.</span> <span class="nav-text">创建一个名为’both’的远程仓库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#给’both’添加push到-coding-net-与-github-仓库的指令"><span class="nav-number">1.3.</span> <span class="nav-text">给’both’添加push到 coding.net 与 github 仓库的指令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#push前下拉代码解决冲突"><span class="nav-number">1.4.</span> <span class="nav-text">push前下拉代码解决冲突</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#push-both"><span class="nav-number">1.5.</span> <span class="nav-text">push both</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#也可以把pull-push操作写入script命令："><span class="nav-number">1.5.1.</span> <span class="nav-text">也可以把pull/push操作写入script命令：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#也可以使用SSH，用SSH方式推送的社会大佬需要配置ssh公钥："><span class="nav-number">1.5.2.</span> <span class="nav-text">也可以使用SSH，用SSH方式推送的社会大佬需要配置ssh公钥：</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
