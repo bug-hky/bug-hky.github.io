@@ -297,6 +297,16 @@
 
           
             
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/05/15/handler/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/05/15/handler/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -333,40 +343,14 @@
 
       
         
-          
-            <p>刷算法题一时爽，一直刷一直爽~</p>
-<h1 id="两数相加"><a href="#两数相加" class="headerlink" title="两数相加"></a>两数相加</h1><p>  给出两个非空的链表用来表示两个非负的整数。其中，它们各自的位数是按照逆序的方式存储的，并且它们的每个节点只能存储一位数字。</p>
-<h2 id="解法"><a href="#解法" class="headerlink" title="解法"></a>解法</h2><pre><code>/**
-* Definition for singly-linked list.
-* public class ListNode {
-*     int val;
-*     ListNode next;
-*     ListNode(int x) { val = x; }
-* }
-*/
-class Solution {
-    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
-        ListNode dummyHead = new ListNode(0);
-        ListNode p = l1, q = l2, curr = dummyHead;
-        int carry = 0;
-        while (p != null || q != null) {
-            int x = (p != null) ? p.val : 0;
-            int y = (q != null) ? q.val : 0;
-            int sum = carry + x + y;
-            carry = sum / 10;
-            curr.next = new ListNode(sum % 10);
-            curr = curr.next;
-            if (p != null) p = p.next;
-            if (q != null) q = q.next;
-        }
-        if (carry &gt; 0) {
-            curr.next = new ListNode(carry);
-        }
-        return dummyHead.next;
-    }
-}
-</code></pre>
-          
+          <p>刷算法题一时爽，一直刷一直爽~<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/05/15/handler/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -457,6 +441,16 @@ class Solution {
           
 
           
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/04/21/2019-4-20/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/04/21/2019-4-20/" itemprop="commentCount"></span>
+                </a>
+              </span>
             
           
 
@@ -593,6 +587,16 @@ class Solution {
 
           
             
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/11/20/es6/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/11/20/es6/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -727,6 +731,16 @@ class Solution {
           
 
           
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/11/04/hello-world/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/11/04/hello-world/" itemprop="commentCount"></span>
+                </a>
+              </span>
             
           
 
@@ -868,6 +882,16 @@ origin  https://github.com/user/project.git (push)
 
           
             
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/10/09/2018-10-9/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/10/09/2018-10-9/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -1008,7 +1032,7 @@ origin  https://github.com/user/project.git (push)
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -1231,6 +1255,28 @@ origin  https://github.com/user/project.git (push)
 
 
 
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'pMYXEwvk2FsI6SkoNr5nNauu-gzGzoHsz',
+        appKey: 'd7bMnHjHBd6g3EbgE3xpfzlX',
+        placeholder: '请开始你的表演≧∀≦!',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
 
 
 
