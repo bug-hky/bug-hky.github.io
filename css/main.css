@@ -1827,7 +1827,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #128785;
+  background: #3d4fff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2920,8 +2920,41 @@ pre,
 .highlight {
   background: rgba(0,0,0,0.6) none repeat scroll !important;
 }
+.aplayer-list ol li:hover {
+/*列表悬停颜色*/
+  background: rgba(255,255,255,0.5) none repeat scroll !important;
+}
+.aplayer-list ol li {
+/*列表底色*/
+  background: rgba(255,255,255,0.6);
+}
+.aplayer-list-light {
+/*列表播放歌曲颜色*/
+  background: rgba(255,255,255,0.7) none repeat scroll !important;
+}
+#player1 {
+/*边框样式*/
+  border-radius: 6px;
+}
+#player1 div,
+#player1 ol {
+  border-radius: 6px;
+}
+#player1 * {
+  color: #ccc;
+}
+.aplayer-list-index {
+  float: left;
+}
+.aplayer-list-title {
+  float: left;
+}
+.aplayer-list-author {
+  float: right;
+}
 @media screen and (min-width: 800px) {
   .content {
+    border-radius: 5px;
     margin-top: 60px;
     padding: 20px;
     background: rgba(0,0,0,0.5) none repeat scroll !important;
@@ -2979,17 +3012,18 @@ pre,
     margin-right: 0;
   }
   .v .vwrap {
+    border: none !important;
     background: rgba(0,0,0,0.5) none repeat scroll !important;
   }
   .v .vinput {
-    font-size: 1.5rem !important;
+    font-size: 1.2rem !important;
     color: #fff !important;
   }
   .v .vwrap .vedit .vctrl span {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
   .v .vbtn {
-    font-size: 1.5rem !important;
+    font-size: 1.2rem !important;
   }
   .v .info {
     display: none;
@@ -3076,16 +3110,17 @@ pre,
   }
   .v .vwrap {
     background: rgba(0,0,0,0.5) none repeat scroll !important;
+    border: none !important;
   }
   .v .vinput {
-    font-size: 1.5rem !important;
+    font-size: 1.2rem !important;
     color: #fff !important;
   }
   .v .vwrap .vedit .vctrl span {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
   .v .vbtn {
-    font-size: 1.5rem !important;
+    font-size: 1.2rem !important;
   }
   .v .info {
     display: none;
