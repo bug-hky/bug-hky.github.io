@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="生当做沙雕">
 <meta property="og:description" content="场景  &amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;自己想做点demo练手的时候，总是需要github和gitlab之类的托管所。我想把commit了的代码push到两个远程仓库上，又不想push两次。下面是拿github 和 coding.net举例，所以： 先查看一下已有的github远程库git remote -v origin  https://github.com/user/proj">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-29T14:47:57.574Z">
+<meta property="og:updated_time" content="2019-06-06T06:11:23.014Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="本地项目push操作同步到coding.net与github上">
 <meta name="twitter:description" content="场景  &amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;自己想做点demo练手的时候，总是需要github和gitlab之类的托管所。我想把commit了的代码push到两个远程仓库上，又不想push两次。下面是拿github 和 coding.net举例，所以： 先查看一下已有的github远程库git remote -v origin  https://github.com/user/proj">
@@ -197,16 +197,6 @@
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
             标签
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-categories">
-          <a href="/categories/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
-            
-            分类
           </a>
         </li>
       
@@ -352,7 +342,12 @@ git remote set-url --add --push both https://github.com/XXX.git
 </code></pre><h2 id="push前下拉代码解决冲突"><a href="#push前下拉代码解决冲突" class="headerlink" title="push前下拉代码解决冲突"></a>push前下拉代码解决冲突</h2><pre><code>git pull both master(branch)
 </code></pre><h2 id="push-both"><a href="#push-both" class="headerlink" title="push both"></a>push both</h2><pre><code>git push both 如果成功就能分别看到coding.net 与 github上面的最新的版本号了
 </code></pre><h3 id="也可以把pull-push操作写入script命令："><a href="#也可以把pull-push操作写入script命令：" class="headerlink" title="也可以把pull/push操作写入script命令："></a>也可以把pull/push操作写入script命令：</h3><pre><code>修改项目根目录package.json文件
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&quot;scripts&quot;: &#123;</span><br><span class="line">  ...</span><br><span class="line">  &quot;pushall&quot;: &quot;git push both&quot;,</span><br><span class="line">  &quot;pullall&quot;: &quot;git pull both&quot;</span><br><span class="line">  ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+&quot;scripts&quot;: {
+  ...
+  &quot;pushall&quot;: &quot;git push both&quot;,
+  &quot;pullall&quot;: &quot;git pull both&quot;
+  ...
+}
 </code></pre><h3 id="也可以使用SSH，用SSH方式推送的社会大佬需要配置ssh公钥："><a href="#也可以使用SSH，用SSH方式推送的社会大佬需要配置ssh公钥：" class="headerlink" title="也可以使用SSH，用SSH方式推送的社会大佬需要配置ssh公钥："></a>也可以使用SSH，用SSH方式推送的社会大佬需要配置ssh公钥：</h3><pre><code>配置完公钥后续的操作基本一致，我也是参考了某位大佬的原文链接：
 </code></pre><p>  <a href="https://blog.csdn.net/shengzhu1/article/details/53493722" target="_blank" rel="noopener">骚操作原文点这里</a></p>
 
@@ -385,8 +380,8 @@ git remote set-url --add --push both https://github.com/XXX.git
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/10/09/2018-10-9/" rel="next" title="2018.10.9下班后的晚上">
-                <i class="fa fa-chevron-left"></i> 2018.10.9下班后的晚上
+              <a href="/2018/10/09/2018-10-9/" rel="next" title="2018.10.9下班前">
+                <i class="fa fa-chevron-left"></i> 2018.10.9下班前
               </a>
             
           </div>
@@ -477,7 +472,7 @@ git remote set-url --add --push both https://github.com/XXX.git
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -490,7 +485,7 @@ git remote set-url --add --push both https://github.com/XXX.git
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -525,7 +520,6 @@ git remote set-url --add --push both https://github.com/XXX.git
           
 
           
-
         </div>
       </section>
 
