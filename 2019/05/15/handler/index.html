@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="生当做沙雕">
 <meta property="og:description" content="&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;刷算法题一时爽，一直刷一直爽~">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-06-06T06:46:21.325Z">
+<meta property="og:updated_time" content="2019-06-14T07:02:01.611Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="leetCode踩坑">
 <meta name="twitter:description" content="&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;刷算法题一时爽，一直刷一直爽~">
@@ -332,36 +332,57 @@
 
       
         <p>&ensp;&ensp;&ensp;&ensp;刷算法题一时爽，一直刷一直爽~<br><a id="more"></a></p>
-<h1 id="两数相加"><a href="#两数相加" class="headerlink" title="两数相加"></a>两数相加</h1><p>  给出两个非空的链表用来表示两个非负的整数。其中，它们各自的位数是按照逆序的方式存储的，并且它们的每个节点只能存储一位数字。</p>
+<h1 id="两数之和"><a href="#两数之和" class="headerlink" title="两数之和"></a>两数之和</h1><p>  给定一个整数数组nums和一个目标值target，请你在该数组中找出和为目标值的那两个整数，并返回他们的数组下标。你可以假设每种输入只会对应一个答案。但是，你不能重复利用这个数组中同样的元素。</p>
 <h2 id="解法"><a href="#解法" class="headerlink" title="解法"></a>解法</h2><pre><code>/**
-* Definition for singly-linked list.
-* public class ListNode {
-*     int val;
-*     ListNode next;
-*     ListNode(int x) { val = x; }
-* }
+* @param {number[]} nums
+* @param {number} target
+* @return {number[]}
 */
-class Solution {
-    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
-        ListNode dummyHead = new ListNode(0);
-        ListNode p = l1, q = l2, curr = dummyHead;
-        int carry = 0;
-        while (p != null || q != null) {
-            int x = (p != null) ? p.val : 0;
-            int y = (q != null) ? q.val : 0;
-            int sum = carry + x + y;
-            carry = sum / 10;
-            curr.next = new ListNode(sum % 10);
-            curr = curr.next;
-            if (p != null) p = p.next;
-            if (q != null) q = q.next;
-        }
-        if (carry &gt; 0) {
-            curr.next = new ListNode(carry);
-        }
-        return dummyHead.next;
+var twoSum = function(nums, target) {
+    let hashMap = new Map();
+    for (let j = 0; j &lt; nums.length; j++) {
+        hashMap.set(nums[j], j);
     }
-}
+    for (let i = 0; i &lt; nums.length; i++) {
+        let abs = target - nums[i];
+        if (hashMap.has(abs) &amp;&amp; hashMap.get(abs) !== i) {
+            return [hashMap.get(abs), i];
+        }
+    }
+    return false;
+};
+</code></pre><h1 id="两数相加"><a href="#两数相加" class="headerlink" title="两数相加"></a>两数相加</h1><p>  给出两个非空的链表用来表示两个非负的整数。其中，它们各自的位数是按照逆序的方式存储的，并且它们的每个节点只能存储一位数字。</p>
+<h2 id="解法-1"><a href="#解法-1" class="headerlink" title="解法"></a>解法</h2><pre><code>/**
+* Definition for singly-linked list.
+* function ListNode(val) {
+*     this.val = val;
+*     this.next = null;
+* }
+*
+* @param {ListNode} l1
+* @param {ListNode} l2
+* @return {ListNode}
+*/
+var addTwoNumbers = function(l1, l2) {
+    let c1 = l1, c2 = l2;
+    let head = new ListNode(&apos;head&apos;);
+    let current = head;
+    let go = 0;
+    while (c1 || c2) {
+        let num1 = c1 ? c1.val : 0;
+        let num2 = c2 ? c2.val : 0;
+        let sum = num1 + num2 + go;
+        go = sum &gt; 9 ? 1 : 0;
+        current.next = new ListNode(sum % 10);
+        current = current.next;
+        if (c1) c1 = c1.next;
+        if (c2) c2 = c2.next;
+    }
+    if (go &gt; 0) {
+        current.next = new ListNode(go);
+    }
+    return head.next;
+};
 </code></pre>
       
     </div>
@@ -545,7 +566,7 @@ class Solution {
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#两数相加"><span class="nav-number">1.</span> <span class="nav-text">两数相加</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#解法"><span class="nav-number">1.1.</span> <span class="nav-text">解法</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#两数之和"><span class="nav-number">1.</span> <span class="nav-text">两数之和</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#解法"><span class="nav-number">1.1.</span> <span class="nav-text">解法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#两数相加"><span class="nav-number">2.</span> <span class="nav-text">两数相加</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#解法-1"><span class="nav-number">2.1.</span> <span class="nav-text">解法</span></a></li></ol></li></ol></div>
             
 
           </div>
